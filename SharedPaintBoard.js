@@ -18,7 +18,7 @@ class SharedPaintBoard {
         var count = 1;  // we use this to send different id each time. To make it feel like it is coming from different users.
         var myId = Math.floor(Math.random() * 10000)
         canvas_left.isDrawingMode = true;
-        canvas_right.isDrawingMode = true;
+        canvas_right.isDrawingMode = false;
 
         /*
          * Publisher End:
