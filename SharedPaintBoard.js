@@ -4,8 +4,13 @@ class SharedPaintBoard {
      * We keep two canvases to mimic remote user behaviour
      * Events from canvas_left should also reach canvas_right
      */
-        var canvas_left = new fabric.Canvas(data.canvas_paint);
-        var canvas_right = new fabric.Canvas(data.canvas_mirror);
+
+        $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' width='200' height='150' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
+
+        $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' width='200' height='150' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
+
+        var canvas_left = new fabric.Canvas('room_videochat_canvas1');
+        var canvas_right = new fabric.Canvas('room_videochat_canvas2');
 
 // is_down := keeps track if the mouse is down
 // to distinguish mousemove and mousedrag
