@@ -102,7 +102,7 @@ class SharedPaintBoard {
             handle_mouse_down(msg.data.brush, msg.data.point);
         });
 
-        cometApi.start({dev_id: data.room_id})
+        cometApi.start({dev_id: data.board_id})
     }
 }
 
