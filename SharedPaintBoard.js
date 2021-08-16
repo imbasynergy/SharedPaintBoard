@@ -5,9 +5,9 @@ class SharedPaintBoard {
      * Events from canvas_left should also reach canvas_right
      */
 
-        $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' width='200' height='150' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
+        $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' width='100%' height='100%' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
-        $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' width='200' height='150' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
+        $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' width='100%' height='100%' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
         $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
 
