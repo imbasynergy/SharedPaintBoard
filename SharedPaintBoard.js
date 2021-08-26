@@ -5,6 +5,7 @@ class SharedPaintBoard {
      * Events from canvas_left should also reach canvas_right
      */
 
+        $('.'+data.block_paint).append("<div style='width:100%;height:25px;background-color:red'>Инструменты</div>");
         $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
         $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
@@ -21,6 +22,8 @@ class SharedPaintBoard {
         var myId = Math.floor(Math.random() * 10000)
         canvas_left.isDrawingMode = true;
         canvas_right.isDrawingMode = false;
+        canvas_left.freeDrawingBrush.color = "#ff0";
+        canvas_left.freeDrawingBrush.width = 10;
 
         /*
          * Publisher End:
@@ -108,17 +111,6 @@ class SharedPaintBoard {
     }
 }
 
-/**
- const board = SharedPaintBoard({
-  id:"1", // string
-  user_id:"123",  // string
-  holderId: 'my-board', // id in dom tree document.getElementById('my-board')
-})
 
- const img = board.getImage()
- board.makeMirror({
-  id:"1", // string
-  holderId: 'my-board',
-})
 
- */
+
