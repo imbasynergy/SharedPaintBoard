@@ -92,6 +92,10 @@ class SharedPaintBoard {
             delete remote_brush [id];
         }
 
+        function create_canvas_block(){
+            console.log('ggjjhjvb');
+        }
+
 
 // Subscribe to the channel in which chat messages will be sent.
         cometApi.subscription("web_paint.m_up", function (msg) {
