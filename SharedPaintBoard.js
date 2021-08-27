@@ -5,6 +5,8 @@ class SharedPaintBoard {
      * Events from canvas_left should also reach canvas_right
      */
 
+        create_canvas_block(data);
+
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
 
