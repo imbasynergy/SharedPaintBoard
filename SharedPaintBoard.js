@@ -36,7 +36,7 @@ class SharedPaintBoard {
             is_down = true;
             const point = this.getPointer(ev.e)
             const brush = ++count
-            handle_mouse_down (brush, point);
+            // handle_mouse_down (brush, point);
 
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
             return true;
@@ -47,7 +47,7 @@ class SharedPaintBoard {
             const point = this.getPointer(ev.e)
             const brush = count
 
-            handle_mouse_drag (brush, point);
+            // handle_mouse_drag (brush, point);
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
             return true;
         });
@@ -55,7 +55,7 @@ class SharedPaintBoard {
             is_down = false;
             const point = this.getPointer(ev.e)
             const brush = count
-            handle_mouse_up (brush, point);
+            // handle_mouse_up (brush, point);
             cometApi.web_pipe_send("web_paint.m_up", {userId: myId, brush: brush, point: point});
             return true;
         });
