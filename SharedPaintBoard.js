@@ -75,6 +75,8 @@ class SharedPaintBoard {
             brush = remote_brush [id];
             const options = {pointer: point, e: {}}
             brush.onMouseDown(point, options);
+
+            create_canvas_block();
         }
 
         function handle_mouse_drag(id, point) {
@@ -92,9 +94,6 @@ class SharedPaintBoard {
             delete remote_brush [id];
         }
 
-        function create_canvas_block(){
-            console.log('ggjjhjvb');
-        }
 
 
 // Subscribe to the channel in which chat messages will be sent.
@@ -112,6 +111,10 @@ class SharedPaintBoard {
         });
 
         cometApi.start({dev_id: data.board_id})
+    }
+
+       create_canvas_block(){
+        console.log('ggjjhjvb');
     }
 }
 
