@@ -76,7 +76,6 @@ class SharedPaintBoard {
             const options = {pointer: point, e: {}}
             brush.onMouseDown(point, options);
 
-            create_canvas_block();
         }
 
         function handle_mouse_drag(id, point) {
