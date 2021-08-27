@@ -5,7 +5,12 @@ class SharedPaintBoard {
      * Events from canvas_left should also reach canvas_right
      */
 
-        create_canvas_block(data);
+        $('.'+data.block_paint).append("<div style='width:100%;height:25px;background-color:red'>Инструменты</div>");
+        $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
+
+        $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
+
+        $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
 
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
@@ -108,14 +113,7 @@ class SharedPaintBoard {
         cometApi.start({dev_id: data.board_id})
     }
 
-       create_canvas_block(data){
-           $('.'+data.block_paint).append("<div style='width:100%;height:25px;background-color:red'>Инструменты</div>");
-           $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
-           $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
-
-           $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
-    }
 }
 
 
