@@ -24,6 +24,8 @@ class SharedPaintBoard {
         canvas_right.isDrawingMode = false;
         canvas_left.freeDrawingBrush.color = data.color;
         canvas_left.freeDrawingBrush.width = data.width;
+        canvas_right.freeDrawingBrush.color = data.color;
+        canvas_right.freeDrawingBrush.width = data.width;
 
         /*
          * Publisher End:
