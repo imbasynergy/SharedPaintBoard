@@ -5,7 +5,14 @@ class SharedPaintBoard {
      * Events from canvas_left should also reach canvas_right
      */
 
-        $('.'+data.block_paint).append("<div style='width:100%;height:25px;background-color:red'>Инструменты</div>");
+        $('.'+data.block_paint).append("<div style='width:100%;height:25px;background-color:#ada5a5;display:flex;'>"
+                +"<div class='shared-paint-setting-color' style='width:60px;margin-left:10px;margin-top:4px;cursor:pointer;'>"
+                    +"<div style='float:left;font-weight:bold'>Color</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right'></div>"
+                +"</div>"
+                +"<div class='shared-paint-setting-width' style='width:65px;margin-left:15px;margin-top:4px;cursor:pointer;'>"
+                    +"<div style='float:left;font-weight:bold'>Width</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right;color:#fff;text-align:center;'>2</div>"
+                +"</div>"
+            +"</div>");
         $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
         $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
