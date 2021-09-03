@@ -26,6 +26,7 @@ class SharedPaintBoard {
         $('.canvas-container').css("width", "300px");
         $('.canvas-container #room_videochat_canvas2').css("width", "300px");
         $('.canvas-container .upper-canvas').css("width", "300px");
+        $('#room_videochat_canvas2').css("width", "300px");
 
 
 
