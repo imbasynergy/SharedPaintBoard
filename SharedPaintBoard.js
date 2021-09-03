@@ -15,14 +15,15 @@ class SharedPaintBoard {
             +"</div>");
         $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
-        // $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>");
+        $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>");
 
         $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
 
-        $('.canvas-container').css("width", "150px");
 
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
+
+        $('.canvas-container').css("width", "150px");
 
 // is_down := keeps track if the mouse is down
 // to distinguish mousemove and mousedrag
