@@ -19,11 +19,7 @@ class SharedPaintBoard {
 
         $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
 
-        if (document.querySelector("#room_videochat_canvas1")){
-            alert('Элемент найден');
-        }else{
-            alert("Элемент не найден")
-        }
+
 
 
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
