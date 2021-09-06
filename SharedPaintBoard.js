@@ -21,6 +21,8 @@ class SharedPaintBoard {
 
         if (document.querySelector("#room_videochat_canvas1")){
             alert('Элемент найден');
+        }else{
+            alert("Элемент не найден")
         }
 
 
