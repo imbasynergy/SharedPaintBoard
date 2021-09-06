@@ -20,8 +20,8 @@ class SharedPaintBoard {
         $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
 
 
-        var canvas_left = new fabric.Canvas('#room_videochat_canvas1');
-        var canvas_right = new fabric.Canvas('#room_videochat_canvas2');
+        var canvas_left = new fabric.Canvas('room_videochat_canvas1');
+        var canvas_right = new fabric.Canvas('room_videochat_canvas2');
 
         $(".upper-canvas").css('width','150px!important');
         $("#room_videochat_canvas2").css('width','150px!important');
