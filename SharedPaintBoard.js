@@ -13,24 +13,14 @@ class SharedPaintBoard {
                     +"<div style='float:left;font-weight:bold'>Width</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right;color:#fff;text-align:center;'>2</div>"
                 +"</div>"
             +"</div>");
+        $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
-
-        if ( $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>")){
-            alert("канвас 1 сгенерирован");
-        }else{
-            alert("канвас 1 не сгенерирован");
-        }
-
-        if ($('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>")){
-            alert("канвас 2 сгенерирован");
-        }else{
-            alert("канвас 2 не сгенерирован");
-        }
-
+        $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>");
 
         $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
 
 
+        $('.'+data.block_mirror).css("backaground-color",'red');
 
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
