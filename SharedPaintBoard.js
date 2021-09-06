@@ -13,7 +13,8 @@ class SharedPaintBoard {
                     +"<div style='float:left;font-weight:bold'>Width</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right;color:#fff;text-align:center;'>2</div>"
                 +"</div>"
             +"</div>");
-        $('.'+data.block_mirror).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>");
+
+        $('.'+data.block_mirror+'-'+data.board_id).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>");
 
         $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
 
@@ -23,8 +24,6 @@ class SharedPaintBoard {
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
 
-        console.log("тест");
-        console.log(data.board_id);
 
         $(".upper-canvas").css('width','150px!important');
         $("#room_videochat_canvas2").css('width','150px!important');
