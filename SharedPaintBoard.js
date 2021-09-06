@@ -23,7 +23,8 @@ class SharedPaintBoard {
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
 
-
+        console.log("тест");
+        console.log(data.board_id);
 
         $(".upper-canvas").css('width','150px!important');
         $("#room_videochat_canvas2").css('width','150px!important');
