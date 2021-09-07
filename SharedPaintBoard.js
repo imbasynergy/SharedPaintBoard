@@ -12,7 +12,7 @@ class SharedPaintBoard {
                 +"<div class='shared-paint-setting-width' style='width:65px;margin-left:15px;margin-top:4px;cursor:pointer;'>"
                     +"<div style='float:left;font-weight:bold'>Width</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right;color:#fff;text-align:center;'>2</div>"
                 +"</div>"
-                +"<div style='width:65px;margin-left:15px;margin-top:4px;cursor:pointer;'>Send image</div>"
+                +"<div style='width:85px;margin-left:15px;cursor:pointer;background-color: #2121e8;padding: 4px;border-radius: 7px;color:#fff'>Send image</div>"
             +"</div>");
 
         $('.'+data.block_mirror+'-'+data.board_id).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>");
