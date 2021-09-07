@@ -5,7 +5,7 @@ class SharedPaintBoard {
      * Events from canvas_left should also reach canvas_right
      */
 
-        $('.'+data.block_paint).append("<div style='width:100%;height:25px;background-color:#ada5a5;display:flex;'>"
+        $('.'+data.block_paint).append("<div class='paint-shared-top-setting' style='width:100%;height:25px;background-color:#ada5a5;display:flex;'>"
                 +"<div class='shared-paint-setting-color' style='width:60px;margin-left:10px;margin-top:4px;cursor:pointer;'>"
                     +"<div style='float:left;font-weight:bold'>Color</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right'></div>"
                 +"</div>"
