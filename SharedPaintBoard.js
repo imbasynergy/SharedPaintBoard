@@ -52,6 +52,10 @@ class SharedPaintBoard {
             canvas_left.freeDrawingBrush.color = this.value;
         })
 
+        $(".shared-paint-setting-width input").change(function () {
+            canvas_left.freeDrawingBrush.width = this.value;
+        })
+
 
         /*
          * Publisher End:
