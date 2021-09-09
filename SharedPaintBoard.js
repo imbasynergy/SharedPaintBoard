@@ -10,7 +10,7 @@ class SharedPaintBoard {
                     +"Color <input type='color' class='shared-paint-setting-color-input'>"
                 +"</div>"
                 +"<div class='shared-paint-setting-width' style='width:65px;margin-left:15px;margin-top:4px;cursor:pointer;'>"
-                    +"<div style='float:left;font-weight:bold'>Width</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right;color:#fff;text-align:center;'>2</div>"
+                    +"<div style='float:left;font-weight:bold'>Width</div> <input type='range'>"
                 +"</div>"
             +"</div>");
 
