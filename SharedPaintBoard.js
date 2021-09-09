@@ -53,7 +53,7 @@ class SharedPaintBoard {
         })
 
         $(".shared-paint-setting-width input").change(function () {
-            alert(this.value);
+            canvas_left.freeDrawingBrush.width = this.value;
         })
 
 
