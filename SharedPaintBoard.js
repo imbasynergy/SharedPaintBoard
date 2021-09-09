@@ -7,7 +7,7 @@ class SharedPaintBoard {
 
         $('.'+data.block_paint).append("<div class='paint-shared-top-setting' style='width:100%;height:25px;background-color:#ada5a5;display:flex;'>"
                 +"<div class='shared-paint-setting-color' style='width:82px;margin-left:10px;margin-top:1px;cursor:pointer;'>"
-                    +"Color <input type='color'>"
+                    +"Color <input type='color' class='shared-paint-setting-color-input'>"
                 +"</div>"
                 +"<div class='shared-paint-setting-width' style='width:65px;margin-left:15px;margin-top:4px;cursor:pointer;'>"
                     +"<div style='float:left;font-weight:bold'>Width</div> <div class='shared-paint-setting-color-check' style='width:15px;height:16px;background-color:#000;float:right;color:#fff;text-align:center;'>2</div>"
@@ -48,9 +48,10 @@ class SharedPaintBoard {
         canvas_right.freeDrawingBrush.color = data.color;
         canvas_right.freeDrawingBrush.width = data.width;
 
-        $(".shared-paint-setting-color").click(function () {
-            canvas_left.freeDrawingBrush.color = "#8e32b5";
+        $(".shared-paint-setting-color").change(function () {
+            alert(this.val());
         })
+
 
         /*
          * Publisher End:
