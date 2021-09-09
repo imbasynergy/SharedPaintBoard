@@ -9,8 +9,8 @@ class SharedPaintBoard {
                 +"<div class='shared-paint-setting-color' style='width:82px;margin-left:10px;margin-top:1px;cursor:pointer;'>"
                     +"Color <input type='color' class='shared-paint-setting-color-input'>"
                 +"</div>"
-                +"<div class='shared-paint-setting-width' style='width:65px;margin-left:15px;margin-top:4px;cursor:pointer;'>"
-                    +"<div style='float:left;font-weight:bold'>Width</div> <input type='range'>"
+                +"<div class='shared-paint-setting-width' style='width:120px;margin-left:15px;margin-top:4px;cursor:pointer;'>"
+                    +"<div style='float:left;font-weight:bold'>Width</div> <input type='range' min='1' max='10' step='1' style='width: 65px'>"
                 +"</div>"
             +"</div>");
 
