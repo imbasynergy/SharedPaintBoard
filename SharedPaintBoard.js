@@ -48,8 +48,8 @@ class SharedPaintBoard {
         canvas_right.freeDrawingBrush.color = data.color;
         canvas_right.freeDrawingBrush.width = data.width;
 
-        $(".shared-paint-setting-color").change(function () {
-            alert(this.value);
+        $(".shared-paint-setting-color input").change(function () {
+            alert(this.val());
         })
 
 
