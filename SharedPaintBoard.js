@@ -48,6 +48,10 @@ class SharedPaintBoard {
         canvas_right.freeDrawingBrush.color = data.color;
         canvas_right.freeDrawingBrush.width = data.width;
 
+        $(".shared-paint-setting-color").click(function () {
+            canvas_left.freeDrawingBrush.color = "#8e32b5";
+        })
+
         /*
          * Publisher End:
          * Event listeners for canvas_left
