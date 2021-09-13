@@ -16,7 +16,7 @@ class SharedPaintBoard {
 
         $('.'+data.block_mirror+'-'+data.board_id).append("<canvas id='room_videochat_canvas2' style='border:1px solid #000000; display: inline-block;float:left;width:150px;height:150px'></canvas>");
 
-        $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;'></canvas>");
+        $('.'+data.block_paint).append("<canvas id='room_videochat_canvas1' style='border:1px solid #000000; display: inline-block;float:left;background-color: #fff'></canvas>");
 
         $('.'+data.block_mirror+' canvas').css("pointer-events", "none");
 
@@ -48,7 +48,7 @@ class SharedPaintBoard {
         // var ctx = canvas_left.getContext('2d');
         // ctx.fillStyle = "#fff";
         // ctx.fillRect(0,0, 335,300);
-        canvas_left.css("background-color",'red');
+
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
