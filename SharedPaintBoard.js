@@ -45,9 +45,10 @@ class SharedPaintBoard {
         canvas_left.freeDrawingBrush.color = data.color;
         canvas_left.freeDrawingBrush.width = data.width;
 
-        var ctx = canvas_left.getContext('2d');
-        ctx.fillStyle = "#fff";
-        ctx.fillRect(0,0, 335,300);
+        // var ctx = canvas_left.getContext('2d');
+        // ctx.fillStyle = "#fff";
+        // ctx.fillRect(0,0, 335,300);
+        canvas_left.css("background-color",'red');
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
