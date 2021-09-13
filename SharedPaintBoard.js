@@ -46,8 +46,10 @@ class SharedPaintBoard {
         canvas_left.freeDrawingBrush.width = data.width;
 
 
-        canvas_left.fillStyle = "#fff";
-        canvas_left.fillRect(0,0, 335,300);
+        let canvas_paint = document.getElementById('room_videochat_canvas1');
+        let ctx = canvas_paint.getContext('2d');
+        ctx.fillStyle = "#fff";
+        ctx.fillRect(0,0, 335,300);
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
