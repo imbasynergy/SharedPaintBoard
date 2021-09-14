@@ -72,7 +72,7 @@ class SharedPaintBoard {
             handle_mouse_down (brush, point);
 
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
-            console.log({userId: myId, brush: brush, point: point});
+            // console.log({userId: myId, brush: brush, point: point});
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -83,7 +83,7 @@ class SharedPaintBoard {
 
             handle_mouse_drag (brush, point);
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
-            console.log({userId: myId, brush: brush, point: point});
+            // console.log({userId: myId, brush: brush, point: point});
             return true;
         });
         canvas_left.on('mouse:up', function (ev) {
@@ -92,7 +92,7 @@ class SharedPaintBoard {
             const brush = count
             handle_mouse_up (brush, point);
             cometApi.web_pipe_send("web_paint.m_up", {userId: myId, brush: brush, point: point});
-            console.log({userId: myId, brush: brush, point: point});
+            // console.log({userId: myId, brush: brush, point: point});
             return true;
         });
 
@@ -148,6 +148,19 @@ class SharedPaintBoard {
         });
 
         cometApi.start({dev_id: data.board_id})
+
+    //    тест массива координат
+        var array_coordinates = {};
+        array_coordinates['1245'][1] = {x:15, y:36};
+        array_coordinates['1245'][2] = {x:25, y:36};
+        array_coordinates['1245'][3] = {x:78, y:36};
+
+        array_coordinates['12'][1] = {x:15, y:36};
+        array_coordinates['12'][2] = {x:25, y:36};
+        array_coordinates['12'][3] = {x:78, y:36};
+
+        console.log(array_coordinates);
+
     }
 
 
