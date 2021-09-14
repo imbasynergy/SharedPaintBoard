@@ -149,17 +149,6 @@ class SharedPaintBoard {
 
         cometApi.start({dev_id: data.board_id})
 
-    //    тест массива координат
-        var array_coordinates = {};
-        array_coordinates['1245']['1'] = {x:15, y:36};
-        array_coordinates['1245']['2'] = {x:25, y:36};
-        array_coordinates['1245']['3'] = {x:78, y:36};
-
-        array_coordinates['12']['1'] = {x:15, y:36};
-        array_coordinates['12']['2'] = {x:25, y:36};
-        array_coordinates['12']['3'] = {x:78, y:36};
-
-        console.log(array_coordinates);
 
     }
 
