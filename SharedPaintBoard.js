@@ -72,6 +72,7 @@ class SharedPaintBoard {
             handle_mouse_down (brush, point);
 
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
+            console.log({userId: myId, brush: brush, point: point});
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -82,6 +83,7 @@ class SharedPaintBoard {
 
             handle_mouse_drag (brush, point);
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
+            console.log({userId: myId, brush: brush, point: point});
             return true;
         });
         canvas_left.on('mouse:up', function (ev) {
@@ -90,6 +92,7 @@ class SharedPaintBoard {
             const brush = count
             handle_mouse_up (brush, point);
             cometApi.web_pipe_send("web_paint.m_up", {userId: myId, brush: brush, point: point});
+            console.log({userId: myId, brush: brush, point: point});
             return true;
         });
 
