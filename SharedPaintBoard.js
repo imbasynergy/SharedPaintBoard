@@ -64,9 +64,7 @@ class SharedPaintBoard {
         array_coordinates['coordinates'] = [];
 
 
-        function test_array2(){
             console.log(array_coordinates);
-        }
 
         /*
          * Publisher End:
