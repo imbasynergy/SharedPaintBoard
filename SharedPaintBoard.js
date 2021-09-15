@@ -147,9 +147,14 @@ class SharedPaintBoard {
 
         function array_log(){
             console.log("Список координат");
+            var canvas = document.getElementById('test_canvas');
+            var ctx = canvas.getContext("2d");
+            console.log(array_coordinates['coordinates'][0]);
             array_coordinates['coordinates'].forEach(function (elem) {
-                        console.log(elem);
-                    })
+
+
+                // console.log(elem);
+            })
         }
         // function paint_log(){
         //     console.log("Список координат");
