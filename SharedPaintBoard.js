@@ -146,7 +146,10 @@ class SharedPaintBoard {
         }
 
         function array_log(){
-            console.log('kjkkl');
+            console.log("Список координат");
+            array_coordinates.forEach(function (elem) {
+                        console.log(elem);
+                    })
         }
         // function paint_log(){
         //     console.log("Список координат");
