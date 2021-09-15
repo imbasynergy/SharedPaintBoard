@@ -28,10 +28,6 @@ class SharedPaintBoard {
         $(".upper-canvas").css('width','150px!important');
         $("#room_videochat_canvas2").css('width','150px!important');
 
-        // $('.canvas-container').css("width", "300px");
-        // $('.canvas-container #room_videochat_canvas2').css("width", "300px");
-        // $('.canvas-container .upper-canvas').css("width", "300px");
-        // $('#room_videochat_canvas2').css("width", "300px");
 
 
 
@@ -60,6 +56,16 @@ class SharedPaintBoard {
         })
 
 
+        //array coordinates paint
+        var array_coordinates = [];
+        array_coordinates['id'] = data.board_id;
+        array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
+        array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
+        array_coordinates['coordinates'] = [];
+
+
+
+
         /*
          * Publisher End:
          * Event listeners for canvas_left
@@ -72,7 +78,8 @@ class SharedPaintBoard {
             handle_mouse_down (brush, point);
 
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
-            // console.log({userId: myId, brush: brush, point: point});
+            console.log({userId: myId, brush: brush, point: point});
+            array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -83,7 +90,8 @@ class SharedPaintBoard {
 
             handle_mouse_drag (brush, point);
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
-            // console.log({userId: myId, brush: brush, point: point});
+            console.log({userId: myId, brush: brush, point: point});
+            array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:up', function (ev) {
@@ -92,7 +100,9 @@ class SharedPaintBoard {
             const brush = count
             handle_mouse_up (brush, point);
             cometApi.web_pipe_send("web_paint.m_up", {userId: myId, brush: brush, point: point});
-            // console.log({userId: myId, brush: brush, point: point});
+            console.log({userId: myId, brush: brush, point: point});
+            array_coordinates['coordinates'].push(point);
+            console.log(array_coordinates);
             return true;
         });
 
