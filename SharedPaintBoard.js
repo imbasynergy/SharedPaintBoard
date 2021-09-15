@@ -78,7 +78,9 @@ class SharedPaintBoard {
             handle_mouse_down (brush, point);
 
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
-            console.log({userId: myId, brush: brush, point: point});
+            // console.log({userId: myId, brush: brush, point: point});
+            array_coordinates['coordinates'].push(point);
+            console.log(array_coordinates);
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -89,8 +91,9 @@ class SharedPaintBoard {
 
             handle_mouse_drag (brush, point);
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
-            console.log({userId: myId, brush: brush, point: point});
-
+            // console.log({userId: myId, brush: brush, point: point});
+            array_coordinates['coordinates'].push(point);
+            console.log(array_coordinates);
             return true;
         });
         canvas_left.on('mouse:up', function (ev) {
@@ -99,8 +102,9 @@ class SharedPaintBoard {
             const brush = count
             handle_mouse_up (brush, point);
             cometApi.web_pipe_send("web_paint.m_up", {userId: myId, brush: brush, point: point});
-            console.log({userId: myId, brush: brush, point: point});
-
+            // console.log({userId: myId, brush: brush, point: point});
+            array_coordinates['coordinates'].push(point);
+            console.log(array_coordinates);
             return true;
         });
 
@@ -121,7 +125,6 @@ class SharedPaintBoard {
             brush = remote_brush [id];
             const options = {pointer: point, e: {}}
             brush.onMouseDown(point, options);
-            array_coordinates['coordinates'].push(point);
 
         }
 
@@ -131,7 +134,6 @@ class SharedPaintBoard {
                 const options = {pointer: point, e: {}}
                 brush.onMouseMove(point, options);
             }
-            array_coordinates['coordinates'].push(point);
         }
 
         function handle_mouse_up(id, point) {
@@ -139,8 +141,6 @@ class SharedPaintBoard {
             const options = {pointer: point, e: {}}
             brush.onMouseUp(point, options);
             delete remote_brush [id];
-            array_coordinates['coordinates'].push(point);
-            console.log(array_coordinates);
         }
 
 
