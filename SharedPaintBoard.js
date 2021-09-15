@@ -64,7 +64,9 @@ class SharedPaintBoard {
         array_coordinates['coordinates'] = [];
 
 
-
+        function test_array2(){
+            console.log(array_coordinates);
+        }
 
         /*
          * Publisher End:
@@ -102,7 +104,6 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_up", {userId: myId, brush: brush, point: point});
             console.log({userId: myId, brush: brush, point: point});
             array_coordinates['coordinates'].push(point);
-            console.log(array_coordinates);
             return true;
         });
 
