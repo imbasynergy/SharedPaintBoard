@@ -145,11 +145,17 @@ class SharedPaintBoard {
             console.log('up');
         }
 
+        function paint_log(coordinates){
+            console.log("Список координат");
+            var canvas = document.getElementById('test_canvas');
+            var ctx = canvas.getContext("2d");
+            array_coordinates.forEach(function (elem) {
+                console.log(elem);
+            })
 
+        }
 
-        var getar = new GetPaintArray();
-
-        setInterval(getar.zub(),1000);
+        setInterval(paint_log(array_coordinates['coordinates']),5000);
 
 
 // Subscribe to the channel in which chat messages will be sent.
