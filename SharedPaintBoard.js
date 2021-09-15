@@ -145,17 +145,19 @@ class SharedPaintBoard {
             console.log('up');
         }
 
-        function paint_log(){
-            console.log("Список координат");
-            // var canvas = document.getElementById('test_canvas');
-            // var ctx = canvas.getContext("2d");
-            // array_coordinates.forEach(function (elem) {
-            //     console.log(elem);
-            // })
-
+        function array_log(){
+            console.log('kjkkl');
         }
-
-        setInterval(paint_log(),5000);
+        // function paint_log(){
+        //     console.log("Список координат");
+        //     // var canvas = document.getElementById('test_canvas');
+        //     // var ctx = canvas.getContext("2d");
+        //     // array_coordinates.forEach(function (elem) {
+        //     //     console.log(elem);
+        //     // })
+        //
+        // }
+        setInterval(array_log,5000);
 
 
 // Subscribe to the channel in which chat messages will be sent.
