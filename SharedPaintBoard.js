@@ -79,6 +79,7 @@ class SharedPaintBoard {
 
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
+            console.log('down');
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -90,6 +91,7 @@ class SharedPaintBoard {
             handle_mouse_drag (brush, point);
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
+            console.log('move');
             return true;
         });
         canvas_left.on('mouse:up', function (ev) {
@@ -99,8 +101,9 @@ class SharedPaintBoard {
             handle_mouse_up (brush, point);
             cometApi.web_pipe_send("web_paint.m_up", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
-            array_coordinates['coordinates'].push(point);
-            console.log(array_coordinates);
+            // array_coordinates['coordinates'].push(point);
+            // console.log(array_coordinates);
+            console.log('up');
             return true;
         });
 
