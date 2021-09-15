@@ -140,6 +140,7 @@ class SharedPaintBoard {
             const options = {pointer: point, e: {}}
             brush.onMouseUp(point, options);
             delete remote_brush [id];
+            console.log('up');
         }
 
 
