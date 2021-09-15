@@ -147,7 +147,7 @@ class SharedPaintBoard {
 
         function array_log(){
             console.log("Список координат");
-            array_coordinates.forEach(function (elem) {
+            array_coordinates['coordinates'].forEach(function (elem) {
                         console.log(elem);
                     })
         }
