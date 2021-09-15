@@ -147,7 +147,7 @@ class SharedPaintBoard {
 
 
 
-        setInterval(imbaChat.getPaintBoardArray(array_coordinates),15000);
+        setInterval(getPaintBoardArray(array_coordinates),15000);
 
 
 // Subscribe to the channel in which chat messages will be sent.
