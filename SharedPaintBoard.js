@@ -147,7 +147,9 @@ class SharedPaintBoard {
 
 
 
-        setInterval(roomChat.getPaintBoardArray(array_coordinates),15000);
+        var getar = new GetPaintArray();
+
+        setInterval(getar.zub(),1000);
 
 
 // Subscribe to the channel in which chat messages will be sent.
