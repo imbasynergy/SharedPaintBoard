@@ -145,11 +145,9 @@ class SharedPaintBoard {
             console.log('up');
         }
 
-        function array_log(){
-            console.log(array_coordinates);
-        }
 
-        setInterval(array_log,5000);
+
+        setInterval(imbaChat.getPaintBoardArray(array_coordinates),15000);
 
 
 // Subscribe to the channel in which chat messages will be sent.
