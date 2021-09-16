@@ -63,9 +63,6 @@ class SharedPaintBoard {
         array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         array_coordinates['coordinates'] = [];
 
-
-            console.log(array_coordinates);
-
         /*
          * Publisher End:
          * Event listeners for canvas_left
@@ -151,20 +148,9 @@ class SharedPaintBoard {
             var ctx = canvas.getContext("2d");
             console.log(array_coordinates['coordinates'][0]);
             array_coordinates['coordinates'].forEach(function (elem) {
-
-
-                // console.log(elem);
+                console.log(elem);
             })
         }
-        // function paint_log(){
-        //     console.log("Список координат");
-        //     // var canvas = document.getElementById('test_canvas');
-        //     // var ctx = canvas.getContext("2d");
-        //     // array_coordinates.forEach(function (elem) {
-        //     //     console.log(elem);
-        //     // })
-        //
-        // }
         setInterval(array_log,5000);
 
 
