@@ -47,21 +47,25 @@ class SharedPaintBoard {
         ctx.fillStyle = "white";
         ctx.fillRect(0,0, 335,300);
 
-        $(".shared-paint-setting-color input").change(function () {
-            canvas_left.freeDrawingBrush.color = this.value;
-        })
-
-        $(".shared-paint-setting-width input").change(function () {
-            canvas_left.freeDrawingBrush.width = this.value;
-        })
-
-
         //array coordinates paint
         var array_coordinates = [];
         array_coordinates['id'] = data.board_id;
         array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
         array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         array_coordinates['coordinates'] = [];
+
+        $(".shared-paint-setting-color input").change(function () {
+            canvas_left.freeDrawingBrush.color = this.value;
+            array_coordinates['color'] = this.value;
+        })
+
+        $(".shared-paint-setting-width input").change(function () {
+            canvas_left.freeDrawingBrush.width = this.value;
+            array_coordinates['width'] = this.value;
+        })
+
+
+
 
         /*
          * Publisher End:
@@ -146,9 +150,9 @@ class SharedPaintBoard {
             console.log("Список координат");
             var canvas = document.getElementById('test_canvas');
             var ctx = canvas.getContext("2d");
-            console.log(array_coordinates['coordinates'][0]);
+            console.log(array_coordinates);
             array_coordinates['coordinates'].forEach(function (elem) {
-                console.log(elem);
+                // console.log(elem);
             })
         }
         setInterval(array_log,5000);
