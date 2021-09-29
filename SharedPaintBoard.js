@@ -146,17 +146,20 @@ class SharedPaintBoard {
             console.log('up');
         }
 
-        function array_log(){
-            console.log("Список координат");
-            var canvas = document.getElementById('test_canvas');
-            var ctx = canvas.getContext("2d");
-            console.log(array_coordinates);
-            array_coordinates['coordinates'].forEach(function (elem) {
-                // console.log(elem);
-            })
-        }
-        setInterval(array_log,5000);
+        // function array_log(){
+        //     console.log("Список координат");
+        //     var canvas = document.getElementById('test_canvas');
+        //     var ctx = canvas.getContext("2d");
+        //     console.log(array_coordinates);
+        //     array_coordinates['coordinates'].forEach(function (elem) {
+        //         // console.log(elem);
+        //     })
+        // }
+        // setInterval(array_log,5000);
 
+        function testcallback(){
+            console.log('sdf');
+        }
 
 // Subscribe to the channel in which chat messages will be sent.
         cometApi.subscription("web_paint.m_up", function (msg) {
