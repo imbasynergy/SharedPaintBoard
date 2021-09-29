@@ -158,7 +158,8 @@ class SharedPaintBoard {
         // setInterval(array_log,5000);
 
         function testcallback(callback){
-            console.log('sdf');
+            var temp = "dfsdf";
+            callback(temp);
         }
 
 // Subscribe to the channel in which chat messages will be sent.
