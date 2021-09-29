@@ -157,7 +157,7 @@ class SharedPaintBoard {
         // }
         // setInterval(array_log,5000);
 
-        function testcallback(){
+        function testcallback(callback){
             console.log('sdf');
         }
 
