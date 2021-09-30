@@ -57,7 +57,6 @@ class SharedPaintBoard {
         this.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
         this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         this.array_coordinates['coordinates'] = [];
-        this.array_coordinates['coordinates'].push('sdfsdf');
 
         console.log(this.array_coordinates);
 
@@ -88,6 +87,7 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
             // console.log('down');
+            this.array_coordinates['coordinates'].push('sdfsdf');
             this.array_coordinates['coordinates'].push(point);
             return true;
         });
