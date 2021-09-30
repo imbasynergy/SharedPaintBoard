@@ -181,6 +181,10 @@ class SharedPaintBoard {
 
     }
 
+    testgetarray = function () {
+        console.log('Добрался');
+    }
+
 
 }
 
