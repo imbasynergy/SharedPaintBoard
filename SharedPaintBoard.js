@@ -57,6 +57,7 @@ class SharedPaintBoard {
         this.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
         this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         this.array_coordinates['coordinates'] = [];
+        this.array_coordinates['coordinates'].push('sdfsdf');
 
         console.log(this.array_coordinates);
 
