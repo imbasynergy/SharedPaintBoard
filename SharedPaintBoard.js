@@ -188,7 +188,7 @@ class SharedPaintBoard {
 
     testgetarray = function () {
         this.array_coordinates['oo']="jjknk";
-        return this.array_coordinates;
+        return SharedPaintBoard.array_coordinates;
     }
 
 
