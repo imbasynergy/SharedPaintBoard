@@ -1,6 +1,6 @@
 class SharedPaintBoard {
     constructor() {
-        this.mass_c = [];
+        this.array_coordinates = [];
     }
 
     sharedBoard(data) {
@@ -52,11 +52,10 @@ class SharedPaintBoard {
         ctx.fillRect(0,0, 335,300);
 
         //array coordinates paint
-        var array_coordinates = [];
-        array_coordinates['id'] = data.board_id;
-        array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
-        array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
-        array_coordinates['coordinates'] = [];
+        this.array_coordinates['id'] = data.board_id;
+        this.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
+        this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
+        this.array_coordinates['coordinates'] = [];
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
@@ -85,7 +84,7 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
             // console.log('down');
-            array_coordinates['coordinates'].push(point);
+            this.array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -98,7 +97,7 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
             // console.log('move');
-            array_coordinates['coordinates'].push(point);
+            this.array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:up', function (ev) {
@@ -186,8 +185,7 @@ class SharedPaintBoard {
     }
 
     testgetarray = function () {
-        this.mass_c['id']=12;
-        return this.mass_c;
+        return this.array_coordinates;
     }
 
 
