@@ -58,7 +58,7 @@ class SharedPaintBoard {
         this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         this.array_coordinates['coordinates'] = [];
 
-        console.log(this.array_coordinates);
+        var thisObj = this;
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
@@ -87,8 +87,8 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
             // console.log('down');
-            this.array_coordinates['coordinates'].push('sdfsdf');
-            this.array_coordinates['coordinates'].push(point);
+            thisObj.array_coordinates['coordinates'].push('sdfsdf');
+            thisObj.array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
