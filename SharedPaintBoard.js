@@ -46,6 +46,7 @@ class SharedPaintBoard {
         canvas_left.freeDrawingBrush.width = data.width;
 
 
+
         let canvas_paint = document.getElementById('room_videochat_canvas1');
         let ctx = canvas_paint.getContext('2d');
         ctx.fillStyle = "white";
@@ -56,6 +57,8 @@ class SharedPaintBoard {
         this.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
         this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         this.array_coordinates['coordinates'] = [];
+
+        console.log(this.array_coordinates);
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
