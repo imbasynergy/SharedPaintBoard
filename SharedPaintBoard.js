@@ -1,6 +1,7 @@
 class SharedPaintBoard {
     constructor() {
-        this.array_coordinates = [];
+        var all = this;
+        all.array_coordinates = [];
     }
 
     sharedBoard(data) {
@@ -53,10 +54,10 @@ class SharedPaintBoard {
         ctx.fillRect(0,0, 335,300);
 
         //array coordinates paint
-        this.array_coordinates['id'] = data.board_id;
-        this.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
-        this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
-        this.array_coordinates['coordinates'] = [];
+        all.array_coordinates['id'] = data.board_id;
+        all.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
+        all.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
+        all.array_coordinates['coordinates'] = [];
 
         var thisObj = this;
 
@@ -87,8 +88,8 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
             // console.log('down');
-            thisObj.array_coordinates['coordinates'].push('sdfsdf');
-            thisObj.array_coordinates['coordinates'].push(point);
+            all.array_coordinates['coordinates'].push('sdfsdf');
+            all.array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -189,7 +190,7 @@ class SharedPaintBoard {
     }
 
     testgetarray = function () {
-        return this.array_coordinates;
+        return all.array_coordinates;
     }
 
 
