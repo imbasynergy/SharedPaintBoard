@@ -1,4 +1,8 @@
 class SharedPaintBoard {
+    constructor() {
+        this.mass_c = [];
+    }
+
     sharedBoard(data) {
         /*
      * We keep two canvases to mimic remote user behaviour
@@ -182,7 +186,8 @@ class SharedPaintBoard {
     }
 
     testgetarray = function () {
-        console.log('Добрался');
+        this.mass_c['id']=12;
+        return this.mass_c;
     }
 
 
