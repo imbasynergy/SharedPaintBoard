@@ -181,12 +181,13 @@ class SharedPaintBoard {
         cometApi.start({dev_id: data.board_id})
 
 
-        setTimeout(function () {
+        setInterval(function () {
             console.log(thisObj.array_coordinates)
         },10000);
     }
 
     testgetarray = function () {
+        this.array_coordinates['oo']="jjknk";
         return this.array_coordinates;
     }
 
