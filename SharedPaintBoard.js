@@ -62,12 +62,12 @@ class SharedPaintBoard {
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
-            array_coordinates['color'] = this.value;
+            this.array_coordinates['color'] = this.value;
         })
 
         $(".shared-paint-setting-width input").change(function () {
             canvas_left.freeDrawingBrush.width = this.value;
-            array_coordinates['width'] = this.value;
+            this.array_coordinates['width'] = this.value;
         })
 
 
