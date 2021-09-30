@@ -1,7 +1,6 @@
 class SharedPaintBoard {
     constructor() {
-        var all = this;
-        all.array_coordinates = [];
+        this.array_coordinates = [];
     }
 
     sharedBoard(data) {
@@ -54,10 +53,10 @@ class SharedPaintBoard {
         ctx.fillRect(0,0, 335,300);
 
         //array coordinates paint
-        all.array_coordinates['id'] = data.board_id;
-        all.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
-        all.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
-        all.array_coordinates['coordinates'] = [];
+        this.array_coordinates['id'] = data.board_id;
+        this.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
+        this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
+        this.array_coordinates['coordinates'] = [];
 
         var thisObj = this;
 
@@ -88,8 +87,7 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_down", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
             // console.log('down');
-            all.array_coordinates['coordinates'].push('sdfsdf');
-            all.array_coordinates['coordinates'].push(point);
+            thisObj.array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:move', function (ev) {
@@ -102,7 +100,7 @@ class SharedPaintBoard {
             cometApi.web_pipe_send("web_paint.m_move", {userId: myId, brush: brush, point: point});
             // console.log({userId: myId, brush: brush, point: point});
             // console.log('move');
-            this.array_coordinates['coordinates'].push(point);
+            thisObj.array_coordinates['coordinates'].push(point);
             return true;
         });
         canvas_left.on('mouse:up', function (ev) {
@@ -165,10 +163,6 @@ class SharedPaintBoard {
         // }
         // setInterval(array_log,5000);
 
-        function testcallback(callback){
-            var temp = "dfsdf";
-            callback(temp);
-        }
 
 // Subscribe to the channel in which chat messages will be sent.
         cometApi.subscription("web_paint.m_up", function (msg) {
@@ -187,10 +181,13 @@ class SharedPaintBoard {
         cometApi.start({dev_id: data.board_id})
 
 
+        setTimeout(function () {
+            console.log(thisObj.array_coordinates)
+        },10000);
     }
 
     testgetarray = function () {
-        return all.array_coordinates;
+        return array_coordinates;
     }
 
 
