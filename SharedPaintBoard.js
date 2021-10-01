@@ -3,7 +3,7 @@ class SharedPaintBoard {
         this.array_coordinates = [];
     }
 
-    var thisObgect = this;
+    // var thisObgect = this;
 
     sharedBoard(data) {
         /*
