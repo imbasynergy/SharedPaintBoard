@@ -59,7 +59,7 @@ class SharedPaintBoard {
         this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         this.array_coordinates['coordinates'] = [];
 
-        // var thisObj = this;
+        var thisObj = this;
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
@@ -188,7 +188,8 @@ class SharedPaintBoard {
     }
 
     testgetarray = function () {
-        return this.array_coordinates;
+        var thisObj = this;
+        return thisObj.array_coordinates;
     }
 
 
