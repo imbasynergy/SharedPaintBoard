@@ -3,6 +3,8 @@ class SharedPaintBoard {
         this.array_coordinates = [];
     }
 
+    var thisObgect = this;
+
     sharedBoard(data) {
         /*
      * We keep two canvases to mimic remote user behaviour
