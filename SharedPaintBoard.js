@@ -1,7 +1,6 @@
-var thisObj = this;
 class SharedPaintBoard {
     constructor() {
-        thisObj.array_coordinates = [];
+        this.array_coordinates = [];
     }
 
     sharedBoard(data) {
@@ -188,7 +187,7 @@ class SharedPaintBoard {
     }
 
     testgetarray = function () {
-        return thisObj.array_coordinates;
+        return this.array_coordinates;
     }
 
 
