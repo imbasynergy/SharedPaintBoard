@@ -1,7 +1,7 @@
 class SharedPaintBoard {
     constructor() {
         this.array_coordinates = [];
-        const testvar = "dsf";
+
     }
 
 
@@ -40,7 +40,7 @@ class SharedPaintBoard {
         $("#room_videochat_canvas2").css('width','150px!important');
 
 
-        testvar = "ds";
+
 // is_down := keeps track if the mouse is down
 // to distinguish mousemove and mousedrag
         var is_down = false;
