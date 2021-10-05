@@ -1,7 +1,12 @@
 class SharedPaintBoard {
     constructor() {
         this.array_coordinates = [];
+        const testvar = "dsf";
     }
+
+
+
+    thisObj = this;
 
     sharedBoard(data) {
         /*
@@ -35,8 +40,7 @@ class SharedPaintBoard {
         $("#room_videochat_canvas2").css('width','150px!important');
 
 
-
-
+        testvar = "ds";
 // is_down := keeps track if the mouse is down
 // to distinguish mousemove and mousedrag
         var is_down = false;
@@ -189,8 +193,7 @@ class SharedPaintBoard {
     }
 
     getArrayCoordinates = function () {
-        var thisObj = this;
-        return thisObj.array_coordinates;
+        console.log(this.thisObj.array_coordinates)
     }
 
 
