@@ -189,7 +189,8 @@ class SharedPaintBoard {
     }
 
     getArrayCoordinates = function () {
-        return this.array_coordinates;
+        var thisObj = this;
+        return thisObj.array_coordinates;
     }
 
 
