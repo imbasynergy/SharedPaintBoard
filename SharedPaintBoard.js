@@ -28,6 +28,8 @@ class SharedPaintBoard {
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
 
+        var thisObj = this;
+
 
         $(".upper-canvas").css('width','150px!important');
         $("#room_videochat_canvas2").css('width','150px!important');
@@ -53,21 +55,21 @@ class SharedPaintBoard {
         ctx.fillRect(0,0, 335,300);
 
         //array coordinates paint
-        this.array_coordinates['id'] = data.board_id;
-        this.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
-        this.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
-        this.array_coordinates['coordinates'] = [];
+        thisObj.array_coordinates['id'] = data.board_id;
+        thisObj.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
+        thisObj.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
+        thisObj.array_coordinates['coordinates'] = [];
 
-        var thisObj = this;
+
 
         $(".shared-paint-setting-color input").change(function () {
             canvas_left.freeDrawingBrush.color = this.value;
-            this.array_coordinates['color'] = this.value;
+            thisObj.array_coordinates['color'] = this.value;
         })
 
         $(".shared-paint-setting-width input").change(function () {
             canvas_left.freeDrawingBrush.width = this.value;
-            this.array_coordinates['width'] = this.value;
+            thisObj.array_coordinates['width'] = this.value;
         })
 
 
