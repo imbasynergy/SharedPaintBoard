@@ -185,9 +185,6 @@ window.SharedPaintBoard = function(){
         cometApi.start({dev_id: data.board_id})
 
 
-        setInterval(function () {
-            console.log(thisObj.array_coordinates)
-        },10000);
     }
 
     this.getArrayCoordinates = () => {
