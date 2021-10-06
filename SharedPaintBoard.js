@@ -1,4 +1,4 @@
-const SharedPaintBoard = () => {
+window.SharedPaintBoard = () => {
     //constructor() {
         this.array_coordinates = [];
 
