@@ -202,7 +202,5 @@ return this;
 
 
 
-// const board = new SharedPaintBoard({
-
-});
+// const board = new SharedPaintBoard({});
 
