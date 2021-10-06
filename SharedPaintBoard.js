@@ -1,4 +1,4 @@
-window.SharedPaintBoard = function() => {
+window.SharedPaintBoard = function(){
     //constructor() {
         this.array_coordinates = [];
 
