@@ -185,10 +185,15 @@ window.SharedPaintBoard = function(){
         cometApi.start({dev_id: data.board_id})
 
 
+
     }
 
     this.getArrayCoordinates = () => {
         return thisObj.array_coordinates;
+    }
+
+    this.deleteArrayCoordinates = () =>{
+        thisObj.array_coordinates['coordinates'] = [];
     }
 
 return this;
