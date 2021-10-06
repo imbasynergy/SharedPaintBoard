@@ -188,7 +188,6 @@ window.SharedPaintBoard = function(){
     }
 
     this.getArrayCoordinates = () => {
-        console.log(thisObj.array_coordinates)
         return thisObj.array_coordinates;
     }
 
