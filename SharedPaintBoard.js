@@ -1,14 +1,14 @@
-class SharedPaintBoard {
-    constructor() {
+const SharedPaintBoard = () => {
+    //constructor() {
         this.array_coordinates = [];
 
-    }
+   // }
 
 
 
-    thisObj = this;
+    const thisObj = this;
 
-    sharedBoard(data) {
+    this.sharedBoard = (data) => {
         /*
      * We keep two canvases to mimic remote user behaviour
      * Events from canvas_left should also reach canvas_right
@@ -33,7 +33,8 @@ class SharedPaintBoard {
         var canvas_left = new fabric.Canvas('room_videochat_canvas1');
         var canvas_right = new fabric.Canvas('room_videochat_canvas2');
 
-        var thisObj = this;
+        var 
+        = this;
 
 
         $(".upper-canvas").css('width','150px!important');
@@ -192,13 +193,16 @@ class SharedPaintBoard {
         },10000);
     }
 
-    getArrayCoordinates = function () {
-        console.log(this.thisObj.array_coordinates)
+    this.getArrayCoordinates = () => {
+        console.log(thisObj.array_coordinates)
     }
 
-
+return this;
 }
 
 
 
+// const board = new SharedPaintBoard({
+
+});
 
