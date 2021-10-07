@@ -58,6 +58,7 @@ window.SharedPaintBoard = function(){
 
         //array coordinates paint
         thisObj.array_coordinates['id'] = data.board_id;
+        thisObj.array_coordinates['room_id'] = data.room_id;
         thisObj.array_coordinates['color'] = canvas_left.freeDrawingBrush.color;
         thisObj.array_coordinates['width'] = canvas_left.freeDrawingBrush.width;
         thisObj.array_coordinates['coordinates'] = [];
